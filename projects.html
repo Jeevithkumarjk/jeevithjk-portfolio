@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Jeevith Kumar Jayakumar</title>
     <link rel="stylesheet" href="projects.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Raleway:wght@800&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -21,7 +21,7 @@
     <main>
         <h1>PROJECTS</h1>
 
-        <section class="project">
+        <div class="project-card">
             <h2>1. Autonomous Shuttle Project: LA Olympics 2028</h2>
             <p class="project-date">November 2024 - December 2024</p>
             <ul>
@@ -31,13 +31,13 @@
                 <li>Proposed data-driven solutions to improve operational efficiency by 30% and reduce congestion by 20%</li>
             </ul>
             <div class="project-buttons">
-                <button onclick="previewReport('autonomousShuttle')">Preview Report</button>
-                <button onclick="previewWebsite('autonomousShuttle')">Preview Website</button>
+                <button class="preview-btn report-btn" onclick="previewReport('autonomousShuttle')">Preview Report</button>
+                <button class="preview-btn website-btn" onclick="previewWebsite('autonomousShuttle')">Preview Website</button>
             </div>
-        </section>
+        </div>
 
-        <section class="project">
-            <h2>2. Experimental Investigation on Behavior of Circular Footing Resting on Sand, Reinforced with Plastic Geocell</h2>
+        <div class="project-card">
+            <h2>2. Experimental Investigation on Behavior of Circular Footing</h2>
             <p class="project-date">March 2023 - July 2023</p>
             <ul>
                 <li>Investigated load-bearing capacity and settlement behavior of circular footings reinforced with plastic Geocell</li>
@@ -45,52 +45,64 @@
                 <li>Demonstrated plastic geocells as a durable, eco-friendly, and cost-efficient alternative for soil reinforcement</li>
                 <li>Awarded "Best Project of Year 2023" by Karnataka State Council for Science and Technology</li>
             </ul>
-            <button onclick="previewReport('circularFooting')">Preview Report</button>
-        </section>
+            <div class="project-buttons">
+                <button class="preview-btn report-btn" onclick="previewReport('circularFooting')">Preview Report</button>
+            </div>
+        </div>
 
-        <section class="project">
+        <div class="project-card">
             <h2>3. Analysis and Design of Multi-storied Large Scale RC Framed Structure</h2>
             <p class="project-date">December 2022 - February 2023</p>
             <ul>
                 <li>Planned and analyzed a G+6 RC framed structure using ETABS software</li>
                 <li>Collaborated in a six-member team to analyze and design a G+6 commercial structure</li>
                 <li>Mastered ETABS software for structure creation, enhancing technical skills and teamwork abilities</li>
-                <li>Presented the project in a classroom setting, demonstrating proficiency in structural engineering, modeling, and analysis</li>
+                <li>Presented the project in a classroom setting, demonstrating proficiency in structural engineering</li>
             </ul>
-        </section>
+            
+            </div>
+        </div>
 
-        <section class="project">
+        <div class="project-card">
             <h2>4. Retaining Wall Design Mini-Project</h2>
+            <p class="project-date">2022</p>
             <ul>
                 <li>Designed a retaining wall, created a model, and conducted manual analysis</li>
                 <li>Applied Advanced Design of RC Structure calculations for detailed plans</li>
                 <li>Utilized AutoCAD for creating precise engineering drawings of the retaining wall</li>
                 <li>Gained practical experience in geotechnical engineering principles and structural design</li>
             </ul>
-            <button onclick="previewReport('retainingWall')">Preview Report</button>
-        </section>
+            
+            </div>
+        </div>
 
-        <section class="project">
+        <div class="project-card">
             <h2>5. Report on Road Condition and Safety of Road</h2>
+            <p class="project-date">2022</p>
             <ul>
                 <li>Conducted a comprehensive analysis of road conditions and safety measures</li>
                 <li>Applied theoretical knowledge to real-world infrastructure assessment</li>
                 <li>Developed skills in road safety engineering and transportation planning</li>
-                <li>Contributed to understanding critical aspects of transportation infrastructure maintenance and safety</li>
+                <li>Contributed to understanding critical aspects of transportation infrastructure maintenance</li>
             </ul>
-            <button onclick="previewReport('roadSafety')">Preview Report</button>
-        </section>
+            <div class="project-buttons">
+                <button class="preview-btn report-btn" onclick="previewReport('roadSafety')">Preview Report</button>
+            </div>
+        </div>
 
-        <section class="project">
+        <div class="project-card">
             <h2>6. Plastic Roads Seminar Project</h2>
+            <p class="project-date">2022</p>
             <ul>
                 <li>Conducted a comprehensive seminar on "Plastic Roads" under the guidance of Assistant Professor Prasad Pujar</li>
-                <li>Explored innovative use of plastic waste in road construction, addressing waste management and infrastructure development challenges</li>
-                <li>Analyzed potential benefits of plastic roads, including improved durability, water resistance, and cost-effectiveness</li>
-                <li>Investigated environmental impact and sustainability aspects of incorporating recycled plastic in road construction materials</li>
+                <li>Explored innovative use of plastic waste in road construction</li>
+                <li>Analyzed potential benefits of plastic roads, including improved durability and water resistance</li>
+                <li>Investigated environmental impact and sustainability aspects</li>
             </ul>
-            <button onclick="previewAbstract('plasticRoads')">Preview Abstract</button>
-        </section>
+            <div class="project-buttons">
+                <button class="preview-btn abstract-btn" onclick="previewAbstract('plasticRoads')">Preview Abstract</button>
+            </div>
+        </div>
     </main>
 
     <footer>
