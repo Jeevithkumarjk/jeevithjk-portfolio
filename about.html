@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Jeevith Kumar Jayakumar - Educational and Professional Background">
     <title>About - Jeevith Kumar Jayakumar</title>
     <link rel="stylesheet" href="about.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Raleway:wght@800&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -27,15 +28,20 @@
                 <p><em>August 2024 - Present</em></p>
                 <p>GPA: 3.85</p>
                 <p>Relevant Coursework: Data Analytics for Surface Transportation, Intelligent Transport Operations, Design of Transportation Infrastructure, Digital Tools for Transportation</p>
-                <button class="preview-btn" onclick="previewTranscript('USC')">Preview Transcript</button>
+                <div class="btn-container">
+                    
+                </div>
             </div>
+
             <div class="education-card">
                 <h3>JSS Science and Technology University (Formerly S.J.C.E), Mysuru, India</h3>
                 <h4>Bachelor of Engineering in Civil Engineering</h4>
                 <p><em>August 2019 - December 2023</em></p>
                 <p>CGPA: 7.37</p>
                 <p>Relevant Coursework: Highway Engineering, Railway and Airport Engineering, Road Safety Engineering, Concrete and Highway Material Testing Lab, Engineering Mechanics, Construction Materials and Technology, Fundamentals of Surveying, Concrete Technology, Design of RC Structures, Geotechnical Engineering, etc.</p>
-                <button class="preview-btn" onclick="previewTranscript('JSS')">Preview Transcript</button>
+                <div class="btn-container">
+                    
+                </div>
             </div>
         </section>
 
@@ -52,8 +58,8 @@
                     <li>Orchestrated planning and resources for 15 concrete road and drainage projects, ensuring timely and high-quality completion</li>
                 </ul>
                 <p>Digital toolkit: Autocad, Civil 3D, Microsoft Excel</p>
-                <button class="preview-btn" onclick="previewCertificate('MJ')">Preview Certificate</button>
             </div>
+
             <div class="experience-card">
                 <h3>National Highway Authority of India</h3>
                 <h4>Intern</h4>
@@ -65,12 +71,12 @@
                     <li>Assessed safety and quality standards by inspecting over 50 site locations and performing more than 30 laboratory tests</li>
                 </ul>
                 <p>Digital toolkit: Autocad, Civil 3D, OpenRoads, Microsoft Excel, Primavera P6</p>
-                <div class="preview-buttons">
-                    <button class="preview-btn" onclick="previewReport()">Preview Report</button>
-                    <button class="preview-btn" onclick="previewCertificate('NHAI')">Preview Certificate</button>
-                    <button class="preview-btn" onclick="previewPhotos()">Preview Photos</button>
+                <div class="btn-container">
+                    <button class="preview-btn report-btn" onclick="previewReport()">Preview Report</button>
+                    <button class="preview-btn photos-btn" onclick="previewPhotos()">Preview Photos</button>
                 </div>
             </div>
+
             <div class="experience-card">
                 <h3>Trojan Grounds Starbucks, Los Angeles, California</h3>
                 <h4>Part-Time Barista</h4>
@@ -87,46 +93,59 @@
 
         <section id="skills">
             <h2>Skills</h2>
-            <ul>
-                <li>AutoCAD: 2D and 3D design for civil engineering projects</li>
-                <li>STAAD Pro & ETABS: Structural analysis and design</li>
-                <li>Primavera P6: Project scheduling and management</li>
-                <li>MicroStation: Infrastructure design and modeling</li>
-                <li>PTV Vissim: Traffic simulation and analysis</li>
-                <li>OpenRoads & OpenRails: Transportation design software</li>
-                <li>R Programming: Data analysis</li>
-                <li>Microsoft Office Suite: Advanced skills in Excel, Word, and PowerPoint</li>
-            </ul>
+            <div class="skills-card">
+                <ul>
+                    <li>AutoCAD: 2D and 3D design for civil engineering projects</li>
+                    <li>STAAD Pro & ETABS: Structural analysis and design</li>
+                    <li>Primavera P6: Project scheduling and management</li>
+                    <li>MicroStation: Infrastructure design and modeling</li>
+                    <li>PTV Vissim: Traffic simulation and analysis</li>
+                    <li>OpenRoads & OpenRails: Transportation design software</li>
+                    <li>R Programming: Data analysis</li>
+                    <li>Microsoft Office Suite: Advanced skills in Excel, Word, and PowerPoint</li>
+                </ul>
+            </div>
         </section>
 
         <section id="awards">
             <h2>Awards and Honors</h2>
-            <ul>
-                <li>Awarded "Best Project of Year 2023" for final year project from Karnataka State Council for Science and Technology</li>
-            </ul>
+            <div class="awards-card">
+                <ul>
+                    <li>Awarded "Best Project of Year 2023" for final year project from Karnataka State Council for Science and Technology</li>
+                </ul>
+            </div>
         </section>
 
         <section id="certifications">
             <h2>Certifications</h2>
-            <ul>
-                <li>Certificate in Construction Methodology Basics in Civil Engineering from Udemy</li>
-                <li>Certificate in BIM Application for Roads, Highways and Transportation Design from Udemy</li>
-                <li>Certificate in Primavera P6-Project Management from Udemy</li>
-                <li>Certificate in NPTEL Swayam for Plastic Waste Management Management from Indian Institute of Technology, Kharagpur</li>
-                <li>Certificate in Complete AutoCAD 2018-21 course from Udemy</li>
-                <li>Certificate of Energy Literacy from Energy Swaraj Foundation</li>
-            </ul>
+            <div class="certifications-card">
+                <ul>
+                    <li>Certificate in Construction Methodology Basics in Civil Engineering from Udemy</li>
+                    <li>Certificate in BIM Application for Roads, Highways and Transportation Design from Udemy</li>
+                    <li>Certificate in Primavera P6-Project Management from Udemy</li>
+                    <li>Certificate in NPTEL Swayam for Plastic Waste Management Management from Indian Institute of Technology, Kharagpur</li>
+                    <li>Certificate in Complete AutoCAD 2018-21 course from Udemy</li>
+                    <li>Certificate of Energy Literacy from Energy Swaraj Foundation</li>
+                </ul>
+                <div class="btn-container">
+                    <button class="view-all-certificates-btn" onclick="previewAllCertificates()">
+                        View All Certificates
+                    </button>
+                </div>
+            </div>
         </section>
 
         <section id="memberships">
             <h2>Memberships</h2>
-            <ul>
-                <li>Member of American Society of Civil Engineers (ASCE)</li>
-                <li>Member of Institute of Transportation Engineers (ITE)</li>
-                <li>Member of WTS International</li>
-                <li>Member of WTS Los Angeles</li>
-            </ul>
-            <p>Public Representative Head of Nirman Club (Technical Club of Civil, Construction Management, and Environmental Engineering) 2022-2024</p>
+            <div class="memberships-card">
+                <ul>
+                    <li>Member of American Society of Civil Engineers (ASCE)</li>
+                    <li>Member of Institute of Transportation Engineers (ITE)</li>
+                    <li>Member of WTS International</li>
+                    <li>Member of WTS Los Angeles</li>
+                </ul>
+                <p>Public Representative Head of Nirman Club (Technical Club of Civil, Construction Management, and Environmental Engineering) 2022-2024</p>
+            </div>
         </section>
     </main>
 
