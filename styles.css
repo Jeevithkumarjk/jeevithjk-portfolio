@@ -37,6 +37,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 2.5rem;
+    flex-wrap: wrap;
 }
 
 .nav-link {
@@ -72,7 +73,7 @@ body {
 }
 
 .hero {
-    height: 30vh;
+    min-height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,28 +95,6 @@ body {
     color: #ffffff;
     position: relative;
     animation: flyIn 1.5s ease-out;
-    
-}
-
-.nameJK{
-    text-shadow: #2C3E50;
-}
-
-.hero-content h1::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: repeating-linear-gradient(
-        90deg,
-        #ffffff 0px,
-        #ffffff 50px,
-        transparent 50px,
-        transparent 100px
-    );
-    animation: roadMove 2s linear infinite;
 }
 
 .hero-content p {
@@ -137,14 +116,16 @@ body {
 .about-content {
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .profile-image {
-    width: 400px;
-    margin: 3rem auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: 0 0 440px;
+    margin: 0;
+    max-width: 100%;
 }
 
 .profilePic {
@@ -154,12 +135,15 @@ body {
 }
 
 .about-text {
+    flex: 1;
     font-family: 'Poppins', sans-serif;
     line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
+    font-size: 1.125rem;
+    padding: 1.5rem;
     text-align: justify;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    min-width: 300px;
 }
 
 .collaboration-section {
@@ -195,18 +179,11 @@ body {
 
 blockquote {
     font-style: italic;
-    font-size: 1.8rem;
-    max-width: 1000px;
+    font-size: 1.5rem;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0rem;
     line-height: 1.8;
-}
-
-.quote-author {
-    font-style: normal;
-    margin-top: 1rem;
-    font-weight: bold;
-    color: var(--primary-color);
 }
 
 .resume-section {
@@ -216,8 +193,7 @@ blockquote {
 }
 
 .resume {
-    max-width: 800px;
-    width: 100%;
+    max-width: 100%;
     height: auto;
     margin: 2rem auto;
     display: block;
@@ -234,10 +210,6 @@ blockquote {
     transition: background-color 0.3s ease;
 }
 
-.download-button:hover {
-    background-color: var(--hover-color);
-}
-
 footer {
     text-align: center;
     padding: 2rem;
@@ -245,23 +217,60 @@ footer {
     color: var(--card-background);
 }
 
-.social-links {
-    margin-bottom: 1rem;
+@media (max-width: 1200px) {
+    .profile-image {
+        flex: 0 0 385px;
+    }
+    blockquote {
+        font-size: 1.6rem;
+        padding: 1.5rem;
+    }
 }
 
-.social-links a {
-    color: var(--card-background);
-    font-size: 1.5rem;
-    margin: 0 0.5rem;
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    .about-text {
+        padding: 1rem;
+    }
+    .profile-image {
+        flex: 0 0 100%;
+        max-width: 330px;
+        margin: 0 auto;
+    }
+    blockquote {
+        font-size: 1.4rem;
+        padding: 1rem;
+    }
+    #jobsearchText {
+        padding: 1.5rem;
+        font-size: 1.1rem;
+    }
+    .nav-links {
+        gap: 1rem;
+    }
 }
 
-.container {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px;
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .profile-image {
+        max-width: 275px;
+    }
+    blockquote {
+        font-size: 1.2rem;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
 }
-
+/* Add these keyframe animations at the end of your CSS file */
 @keyframes flyIn {
     0% {
         transform: translateX(-100%);
@@ -293,104 +302,105 @@ footer {
     }
 }
 
-@media (max-width: 1200px) {
-    .profile-image {
-        width: 350px;
-    }
-    blockquote {
-        font-size: 1.6rem;
-        padding: 1.5rem;
-    }
+/* Update the hero-content h1 styles */
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    position: relative;
+    animation: flyIn 1.5s ease-out;
 }
 
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    .hero-content p {
-        font-size: 1rem;
-    }
-    .about-text {
-        padding: 1rem;
-    }
-    .profile-image {
-        width: 300px;
-    }
-    blockquote {
-        font-size: 1.4rem;
-        padding: 1rem;
-    }
-    #jobsearchText {
-        padding: 1.5rem;
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .profile-image {
-        width: 250px;
-    }
-    .nav-links {
-        gap: 1rem;
-    }
-    .hero-content h1 {
-        font-size: 1.8rem;
-    }
-    blockquote {
-        font-size: 1.2rem;
-    }
-}
-.about-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.profile-image {
-    flex: 0 0 440px; /* Increased from 400px by 10% */
-    margin: 0;
-}
-
-.profilePic {
+/* Add this new style for the line below the name */
+.hero-content h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
     width: 100%;
-    height: auto;
-    display: block;
+    height: 4px;
+    background: repeating-linear-gradient(
+        90deg,
+        #ffffff 0px,
+        #ffffff 50px,
+        transparent 50px,
+        transparent 100px
+    );
+    animation: roadMove 2s linear infinite;
 }
 
-.about-text {
-    flex: 1;
+/* Update the hero-content p styles */
+.hero-content p {
     font-family: 'Poppins', sans-serif;
-    line-height: 1.8;
-    font-size: 1.125rem; /* Increased from default by 2 points (16px to 18px) */
-    padding: 0;
-    text-align: justify;
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 1.5rem;
-    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards 1s;
+}
+.hero-content h1::before {
+    content: '✈️';
+    font-size: 24px;
+    position: absolute;
+    bottom: -20px;
+    left: -50px;
+    animation: carMove 8s linear infinite;
+}
+@keyframes flightTakeoff {
+    0% { bottom: -20px; left: -50px; transform: rotate(0deg); }
+    25% { bottom: 10%; left: 25%; transform: rotate(10deg); }
+    50% { bottom: 20%; left: 50%; transform: rotate(20deg); }
+    75% { bottom: 30%; left: 75%; transform: rotate(35deg); }
+    100% { bottom: 40%; left: calc(100% + 50px); transform: rotate(45deg); }
 }
 
-@media (max-width: 1200px) {
-    .profile-image {
-        flex: 0 0 385px; /* Increased from 350px by 10% */
-    }
+@keyframes roadMove {
+    from { background-position: 0 0; }
+    to { background-position: 100px 0; }
 }
 
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-    }
-    
-    .profile-image {
-        width: 330px; /* Increased from 300px by 10% */
-        margin: 0 auto;
-    }
+.hero-content {
+    position: relative;
+    overflow: hidden;
 }
 
-@media (max-width: 480px) {
-    .profile-image {
-        width: 275px; /* Increased from 250px by 10% */
-    }
+.hero-content h1 {
+    position: relative;
+}
+
+.hero-content h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: repeating-linear-gradient(
+        90deg,
+        #ffffff 0px,
+        #ffffff 50px,
+        transparent 50px,
+        transparent 100px
+    );
+    animation: roadMove 2s linear infinite;
+}
+
+.hero-content h1::before,
+.hero-content h1 span:first-child::before {
+    content: '🛫';
+    font-size: 24px;
+    position: absolute;
+    bottom: -20px;
+    left: -50px;
+    animation: flightTakeoff 5s linear infinite;
+}
+
+.hero-content h1 span:first-child::before {
+    animation-delay: 2.0s;
 }
