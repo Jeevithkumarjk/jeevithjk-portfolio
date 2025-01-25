@@ -1,0 +1,396 @@
+:root {
+    --primary-color: #5F8D88;
+    --secondary-color: #81B0AC;
+    --accent-color: #A7C7C4;
+    --text-primary: #2C3E50;
+    --text-secondary: #34495E;
+    --background-color: #B8D8D6;
+    --card-background: #ffffff;
+    --hover-color: #66B2B2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.3;
+    background-color: var(--background-color);
+    color: var(--text-primary);
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--primary-color);
+    padding: 1rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.hero {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    background: var(--primary-color);
+    color: var(--card-background);
+    border-bottom: 3px solid var(--accent-color);
+    padding-top: 5%;
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    position: relative;
+    animation: flyIn 1.5s ease-out;
+    
+}
+
+.nameJK{
+    text-shadow: #2C3E50;
+}
+
+.hero-content h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: repeating-linear-gradient(
+        90deg,
+        #ffffff 0px,
+        #ffffff 50px,
+        transparent 50px,
+        transparent 100px
+    );
+    animation: roadMove 2s linear infinite;
+}
+
+.hero-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards 1s;
+}
+
+.about-section {
+    padding: 4rem 2rem;
+    background-color: var(--card-background);
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-image {
+    width: 400px;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profilePic {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-text {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: justify;
+}
+
+.collaboration-section {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+#jobsearchText {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    margin: 3rem auto;
+    max-width: 1000px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 2px solid var(--primary-color);
+    margin-bottom: 0%;
+}
+
+.quote-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    margin: 3rem 0;
+    margin-bottom: 0%;
+    margin-top: 0%;
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 1.8rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    line-height: 1.8;
+}
+
+.quote-author {
+    font-style: normal;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.resume-section {
+    padding: 2rem;
+    background-color: var(--card-background);
+    text-align: center;
+}
+
+.resume {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    margin: 2rem auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.download-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--card-background);
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: var(--hover-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--primary-color);
+    color: var(--card-background);
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: var(--card-background);
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@keyframes flyIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes roadMove {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100px 0;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1200px) {
+    .profile-image {
+        width: 350px;
+    }
+    blockquote {
+        font-size: 1.6rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .about-text {
+        padding: 1rem;
+    }
+    .profile-image {
+        width: 300px;
+    }
+    blockquote {
+        font-size: 1.4rem;
+        padding: 1rem;
+    }
+    #jobsearchText {
+        padding: 1.5rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image {
+        width: 250px;
+    }
+    .nav-links {
+        gap: 1rem;
+    }
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    blockquote {
+        font-size: 1.2rem;
+    }
+}
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.profile-image {
+    flex: 0 0 440px; /* Increased from 400px by 10% */
+    margin: 0;
+}
+
+.profilePic {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-text {
+    flex: 1;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    font-size: 1.125rem; /* Increased from default by 2 points (16px to 18px) */
+    padding: 0;
+    text-align: justify;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+@media (max-width: 1200px) {
+    .profile-image {
+        flex: 0 0 385px; /* Increased from 350px by 10% */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .profile-image {
+        width: 330px; /* Increased from 300px by 10% */
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image {
+        width: 275px; /* Increased from 250px by 10% */
+    }
+}
