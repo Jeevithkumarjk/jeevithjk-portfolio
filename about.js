@@ -1,5 +1,5 @@
 function previewReport() {
-    window.open('NHAI internship Report.pdf', '_blank');
+    window.open('https://drive.google.com/file/d/1QecZDkKMXy9EL7zC_wuX7PdIY-VPvddT/view?usp=drive_link', '_blank');
 }
 
 function previewPhotos() {
