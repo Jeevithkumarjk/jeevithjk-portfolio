@@ -1,13 +1,21 @@
 :root {
-    --primary-color: #5F8D88;
-    --secondary-color: #81B0AC;
-    --accent-color: #A7C7C4;
-    --text-primary: #2C3E50;
-    --text-secondary: #34495E;
-    --background-color: #B8D8D6;
-    --card-background: #ffffff;
-    --hover-color: #66B2B2;
+    --primary-color: #C97706;    /* Amber - slightly less orange, strong contrast to blue */
+    --secondary-color: #E6A00B;  /* Golden yellow, softer than before */
+    --accent-color: #F0BF4F;     /* Softer amber highlight */
+    --text-primary: #2C1810;     /* Deep warm brown for readability */
+    --text-secondary: #4B2E20;   /* Softer brown for subtext */
+    --background-color: #FEF3E2; /* Soft peach, contrasts blue suit perfectly */
+    --card-background: #FFFFFF;  /* White cards - clean and professional */
+    --hover-color: #D97706;      /* Warm golden hover, less bright than original */
 }
+
+
+
+
+
+
+
+
 
 * {
     margin: 0;

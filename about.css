@@ -1,14 +1,13 @@
 :root {
-    --primary-color: #5F8D88;    
-    --secondary-color: #81B0AC;  
-    --accent-color: #A7C7C4;     
-    --text-primary: #2C3E50;    
-    --text-secondary: #34495E;  
-    --background-color: #B8D8D6; 
-    --card-background: #ffffff;  
-    --hover-color: #66B2B2;     
+    --primary-color: #D97706;    /* Rich amber (contrasts deep blue) */
+    --secondary-color: #F59E0B;  /* Warm golden yellow */
+    --accent-color: #FBBF24;     /* Soft amber highlight */
+    --text-primary: #2C1810;     /* Deep brownish-black for readability */
+    --text-secondary: #4B2E20;   /* Warm dark brown */
+    --background-color: #FEF3E2; /* Soft peach-beige background */
+    --card-background: #FFFFFF;  /* White for clean contrast */
+    --hover-color: #EA580C;      /* Vibrant orange hover */
 }
-
 * {
     margin: 0;
     padding: 0;
