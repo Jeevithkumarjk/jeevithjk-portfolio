@@ -4,18 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Jeevith Kumar Jayakumar</title>
+
+    <!-- ✅ Global styles for navbar + mobile menu -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- ✅ Your existing contact page styles -->
     <link rel="stylesheet" href="contact.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Raleway:wght@800&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
+
     <nav class="navbar">
+        <!-- ✅ Mobile menu checkbox (CSS only) -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+        <!-- ✅ 3-line icon (hamburger / 3 dots style) -->
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- ✅ Your existing links (UNCHANGED) -->
         <div class="nav-links">
-            <a href="index.html" class="nav-link">Home</a>
+            <a href="#home" class="nav-link active">Home</a>
             <a href="about.html" class="nav-link">About</a>
             <a href="projects.html" class="nav-link">Projects</a>
             <a href="professional.html" class="nav-link">Professional Development</a>
-            <a href="#" class="nav-link active">Contact</a>
+            <a href="contact.html" class="nav-link">Contact</a>
         </div>
     </nav>
 
@@ -24,26 +43,33 @@
 
         <div class="contact-card">
             <h2 class="nameJk">JEEVITH KUMAR JAYAKUMAR</h2>
+
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
                     <a href="mailto:jeevithk@usc.edu" class="contact-link">jeevithk@usc.edu</a>
                 </div>
+
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
                     <a href="mailto:jjeevithkumar2001@gmail.com" class="contact-link">jjeevithkumar2001@gmail.com</a>
                 </div>
+
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
                     <a href="tel:+12132450020" class="contact-link">+1 (213) 245-0020</a>
                 </div>
+
                 <div class="contact-item">
                     <i class="fab fa-whatsapp"></i>
                     <a href="https://wa.me/918884446806" class="contact-link">+91 8884446806</a>
                 </div>
+
                 <div class="contact-item">
                     <i class="fab fa-linkedin"></i>
-                    <a href="https://linkedin.com/in/jeevithkumarjk" target="_blank" class="contact-link">linkedin.com/in/jeevithkumarjk</a>
+                    <a href="https://linkedin.com/in/jeevithkumarjk" target="_blank" class="contact-link">
+                        linkedin.com/in/jeevithkumarjk
+                    </a>
                 </div>
             </div>
         </div>
@@ -52,5 +78,6 @@
     <footer>
         <p>&copy; 2025 Jeevith Kumar Jayakumar. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
