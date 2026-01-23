@@ -1,12 +1,12 @@
 :root {
-    --primary-color: #D97706;
-    --secondary-color: #F59E0B;
-    --accent-color: #FBBF24;
-    --text-primary: #2C1810;
-    --text-secondary: #4B2E20;
-    --background-color: #FEF3E2;
-    --card-background: #FFFFFF;
-    --hover-color: #EA580C;
+    --primary-color: #D97706;    /* Rich amber (contrasts deep blue) */
+    --secondary-color: #F59E0B;  /* Warm golden yellow */
+    --accent-color: #FBBF24;     /* Soft amber highlight */
+    --text-primary: #2C1810;     /* Deep brownish-black for readability */
+    --text-secondary: #4B2E20;   /* Warm dark brown */
+    --background-color: #FEF3E2; /* Soft peach-beige background */
+    --card-background: #FFFFFF;  /* White for clean contrast */
+    --hover-color: #EA580C;      /* Vibrant orange hover */
 }
 
 * {
@@ -20,27 +20,31 @@ body {
     line-height: 1.6;
     background-color: var(--background-color);
     color: var(--text-primary);
-    overflow-x: hidden;
 }
 
-/* ================= NAVBAR (IDENTICAL TO INDEX) ================= */
+/* ================= NAVBAR (unchanged desktop look) ================= */
 
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
     background: var(--primary-color);
-    padding: 1rem;
+    padding: 1rem 2rem;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     border-bottom: 3px solid var(--accent-color);
+}
+
+/* ✅ hide hamburger elements on desktop */
+.nav-toggle,
+.nav-toggle-label {
+    display: none;
 }
 
 .nav-links {
     display: flex;
     justify-content: center;
     gap: 2.5rem;
-    flex-wrap: wrap;
 }
 
 .nav-link {
@@ -75,15 +79,13 @@ body {
     transform: translateY(-2px);
 }
 
-/* ================= FIXED HEADER SPACING ================= */
+/* ================= MAIN ================= */
 
 main {
     max-width: 1200px;
     margin: 80px auto 0;
     padding: 2rem;
 }
-
-/* ================= PAGE CONTENT (UNCHANGED) ================= */
 
 h1 {
     color: var(--primary-color);
@@ -104,6 +106,8 @@ h2 {
     margin-bottom: 1.5rem;
     font-family: 'Raleway', sans-serif;
 }
+
+/* ================= CARDS (unchanged) ================= */
 
 .event-card {
     background-color: var(--card-background);
@@ -131,7 +135,7 @@ h2 {
 }
 
 .event-card ul {
-    list-style: none;
+    list-style-type: none;
     margin: 1rem 0;
 }
 
@@ -149,7 +153,7 @@ h2 {
     left: 0;
 }
 
-/* ================= BUTTONS (UNCHANGED) ================= */
+/* ================= BUTTONS (unchanged) ================= */
 
 .preview-buttons {
     display: flex;
@@ -175,6 +179,16 @@ h2 {
     transform: translateY(-2px);
 }
 
+.certificate-btn::before {
+    content: "🎓 ";
+    margin-right: 0.5rem;
+}
+
+.photos-btn::before {
+    content: "📸 ";
+    margin-right: 0.5rem;
+}
+
 .article-link {
     display: inline-block;
     background-color: var(--primary-color);
@@ -193,7 +207,8 @@ h2 {
 
 .gallery-button-container {
     text-align: center;
-    margin: 2rem 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .gallery-btn {
@@ -207,6 +222,8 @@ h2 {
     border: none;
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .gallery-btn::before {
@@ -217,6 +234,7 @@ h2 {
 .gallery-btn:hover {
     background-color: var(--hover-color);
     transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 footer {
@@ -228,22 +246,13 @@ footer {
 }
 
 /* =========================================================
-   MOBILE — SAME HAMBURGER AS INDEX (ONLY ADDITION)
+   ✅ MOBILE HAMBURGER (ONLY ADDITION)
+   Requires HTML: input#nav-toggle + label + .nav-links
    ========================================================= */
-
-/* hide toggle + icon on desktop */
-.nav-toggle,
-.nav-toggle-label {
-    display: none;
-}
 
 @media (max-width: 768px) {
 
-    main {
-        padding-top: 90px;
-    }
-
-    /* hamburger icon */
+    /* show hamburger icon */
     .nav-toggle-label {
         display: flex;
         flex-direction: column;
@@ -258,12 +267,12 @@ footer {
     .nav-toggle-label span {
         width: 26px;
         height: 3px;
-        background: #ffffff;
+        background: #fff;
         border-radius: 3px;
         display: block;
     }
 
-    /* collapsed menu */
+    /* hide links by default */
     .nav-links {
         flex-direction: column;
         align-items: center;
@@ -272,6 +281,7 @@ footer {
         overflow: hidden;
         transition: max-height 0.25s ease;
         padding-top: 0;
+        width: 100%;
     }
 
     .nav-link {
@@ -279,14 +289,30 @@ footer {
         text-align: center;
         padding: 1rem;
         border-top: 1px solid rgba(255,255,255,0.2);
-        transform: none;
+        transform: none; /* prevent jump on mobile */
     }
 
     /* open menu */
     .nav-toggle:checked ~ .nav-links {
-        max-height: 420px;
+        max-height: 500px; /* ensures Contact never gets cut */
         padding-top: 10px;
         background-color: var(--primary-color);
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .event-card {
+        padding: 1.5rem;
     }
 
     .preview-buttons {
@@ -299,10 +325,23 @@ footer {
         width: 100%;
         text-align: center;
     }
+
+    .gallery-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
-    h1 { font-size: 1.8rem; }
-    h2 { font-size: 1.6rem; }
-    .event-card h3 { font-size: 1.3rem; }
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .event-card h3 {
+        font-size: 1.3rem;
+    }
 }
