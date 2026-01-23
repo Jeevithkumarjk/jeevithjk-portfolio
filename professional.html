@@ -1,159 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Development - Jeevith Kumar Jayakumar</title>
-    <link rel="stylesheet" href="professional.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Raleway:wght@800&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-    <!-- Font Awesome for LinkedIn icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Development - Jeevith Kumar Jayakumar</title>
+
+  <!-- ✅ GLOBAL (navbar + hamburger) -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- ✅ PAGE CSS (your existing styles for this page) -->
+  <link rel="stylesheet" href="professional.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Raleway:wght@800&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="nav-links">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="about.html" class="nav-link">About</a>
-            <a href="projects.html" class="nav-link">Projects</a>
-            <a href="#" class="nav-link active">Professional Development</a>
-            <a href="contact.html" class="nav-link">Contact</a>
+
+  <!-- ✅ SAME NAVBAR STRUCTURE AS INDEX (hamburger works) -->
+  <nav class="navbar">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="professional.html" class="nav-link active">Professional Development</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="prof-dev-section">
+      <h2>Conferences and Seminars</h2>
+
+      <div class="event-card">
+        <h3>ITE Student Leadership Summit (SLS) 2025 – UCLA</h3>
+        <h4>Field Trip & Speaker Series</h4>
+        <p><em>March 2025 – Los Angeles, California</em></p>
+        <ul>
+          <li>Visited the <strong>LADOT ATSAC Office</strong> to observe real-time traffic monitoring and management systems across the city.</li>
+          <li>Learned about adaptive traffic signal control, transit and emergency vehicle preemption, reversible lane operations, and pedestrian safety enhancements.</li>
+          <li>Gained hands-on insights into traffic operations, roadway management, and incident detection using CCTV and traffic data.</li>
+          <li>Participated in workshops covering multimodal transportation, urban mobility, and sustainable traffic solutions.</li>
+          <li>Enhanced professional skills and understanding of designing intelligent, connected, and resilient transportation systems.</li>
+        </ul>
+        <div class="preview-buttons">
+          <a href="https://www.linkedin.com/posts/jeevithkumarjk_itesls2025-usc-uscite-activity-7292064876066131969-H_Wp?utm_source=share&utm_medium=member_desktop&rcm=ACoAADaGixYB34p9SCjXS_guE568n0acXfhBhHg"
+             target="_blank" class="linkedin-icon">
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
         </div>
-    </nav>
+      </div>
 
-    <main>
-      
+      <div class="event-card">
+        <h3>Autonomous Vehicle Seminar</h3>
+        <ul>
+          <li>Explored the transformative potential of autonomous vehicles in future transportation systems.</li>
+          <li>Learned about modeling human-autonomous interactions, optimizing transportation systems under uncertainty, and integrating autonomous vehicles into existing infrastructure.</li>
+          <li>Gained insights into innovative concepts like altruistic autonomous vehicles to improve traffic flow and safety.</li>
+        </ul>
+        <div class="preview-buttons">
+          <a href="https://www.iteusc.com/page/an-ite-seminar-with-dr-ruolin-li-the-potential-of-autonomous-vehicles-in-future-transportation-systems"
+             class="article-link" target="_blank">Read my article</a>
+        </div>
+      </div>
 
-        <section class="prof-dev-section">
-            <h2>Conferences and Seminars</h2>
-            <div class="event-card">
-                <h3>ITE Student Leadership Summit (SLS) 2025 – UCLA</h3>
-                <h4>Field Trip & Speaker Series</h4>
-                <p><em>March 2025 – Los Angeles, California</em></p>
-                <ul>
-                    <li>Visited the <strong>LADOT ATSAC Office</strong> to observe real-time traffic monitoring and management systems across the city.</li>
-                    <li>Learned about adaptive traffic signal control, transit and emergency vehicle preemption, reversible lane operations, and pedestrian safety enhancements.</li>
-                    <li>Gained hands-on insights into traffic operations, roadway management, and incident detection using CCTV and traffic data.</li>
-                    <li>Participated in workshops covering multimodal transportation, urban mobility, and sustainable traffic solutions.</li>
-                    <li>Enhanced professional skills and understanding of designing intelligent, connected, and resilient transportation systems.</li>
-                </ul>
-                <div class="preview-buttons">
-                    <a href="https://www.linkedin.com/posts/jeevithkumarjk_itesls2025-usc-uscite-activity-7292064876066131969-H_Wp?utm_source=share&utm_medium=member_desktop&rcm=ACoAADaGixYB34p9SCjXS_guE568n0acXfhBhHg" target="_blank" class="linkedin-icon">
-                        <i class="fab fa-linkedin fa-lg"></i>
-                    </a>
-                </div>
-            </div>
+      <div class="event-card">
+        <h3>RACE 23 - National Seminar on Innovative Infrastructure in Civil Engineering</h3>
+        <ul>
+          <li>Gained insights into cutting-edge technologies and sustainability practices in civil engineering.</li>
+          <li>Explored innovative approaches to infrastructure resilience and project management strategies.</li>
+          <li>Networked with industry professionals to stay updated on advancements in the field.</li>
+        </ul>
+      </div>
+    </section>
 
-            <div class="event-card">
-                <h3>Autonomous Vehicle Seminar</h3>
-                <ul>
-                    <li>Explored the transformative potential of autonomous vehicles in future transportation systems.</li>
-                    <li>Learned about modeling human-autonomous interactions, optimizing transportation systems under uncertainty, and integrating autonomous vehicles into existing infrastructure.</li>
-                    <li>Gained insights into innovative concepts like altruistic autonomous vehicles to improve traffic flow and safety.</li>
-                </ul>
-                <div class="preview-buttons">
-                    <a href="https://www.iteusc.com/page/an-ite-seminar-with-dr-ruolin-li-the-potential-of-autonomous-vehicles-in-future-transportation-systems" class="article-link" target="_blank">Read my article</a>
-                </div>
-            </div>
+    <section class="prof-dev-section">
+      <h2>Industry Outreach Program</h2>
+      <div class="event-card">
+        <h3>April 2023</h3>
+        <ul>
+          <li>Engaged with industry experts to understand current trends and challenges in civil engineering.</li>
+          <li>Participated in site visits to observe practical applications of theoretical knowledge.</li>
+          <li>Developed professional networking skills by interacting with professionals from leading organizations.</li>
+        </ul>
+      </div>
+    </section>
 
-            <div class="event-card">
-                <h3>RACE 23 - National Seminar on Innovative Infrastructure in Civil Engineering</h3>
-                <ul>
-                    <li>Gained insights into cutting-edge technologies and sustainability practices in civil engineering.</li>
-                    <li>Explored innovative approaches to infrastructure resilience and project management strategies.</li>
-                    <li>Networked with industry professionals to stay updated on advancements in the field.</li>
-                </ul>
-            </div>
-        </section>
+    <section class="prof-dev-section">
+      <h2>Industry Engagement</h2>
 
-        <section class="prof-dev-section">
-            <h2>Industry Outreach Program</h2>
-            <div class="event-card">
-                <h3>April 2023</h3>
-                <ul>
-                    <li>Engaged with industry experts to understand current trends and challenges in civil engineering.</li>
-                    <li>Participated in site visits to observe practical applications of theoretical knowledge.</li>
-                    <li>Developed professional networking skills by interacting with professionals from leading organizations.</li>
-                </ul>
-            </div>
-        </section>
+      <div class="event-card">
+        <h3>Interstate Bridge (I-5) Site Visit – WSP Internship</h3>
+        <p><em>Portland, OR / Vancouver, WA</em></p>
+        <ul>
+          <li>Visited the historic Interstate Bridge connecting Oregon and Washington, witnessing its vertical lift spans and critical infrastructure first-hand.</li>
+          <li>Learned about the Interstate Bridge Replacement Program focusing on safety improvements, increased capacity, and multimodal access.</li>
+          <li>Observed project planning and execution strategies for large-scale bridge projects, gaining insights into civil and transportation engineering applications.</li>
+          <li>Enhanced understanding of collaborative efforts between state and federal transportation agencies and private engineering teams, as part of my internship experience at WSP.</li>
+        </ul>
+        <div class="preview-buttons">
+          <a href="https://www.linkedin.com/posts/jeevithkumarjk_ibr-wsp-odot-activity-7355492165210296320-Xuey?utm_source=share&utm_medium=member_desktop&rcm=ACoAADaGixYB34p9SCjXS_guE568n0acXfhBhHg"
+             target="_blank" class="linkedin-icon">
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+        </div>
+      </div>
 
-        <section class="prof-dev-section">
-            <h2>Industry Engagement</h2>
+      <div class="event-card">
+        <h3>John Wayne Airport Technical Tour</h3>
+        <p><em>Orange County, California</em></p>
+        <ul>
+          <li>Explored airside operations, runway systems, and airport infrastructure beyond the terminal.</li>
+          <li>Observed sustainable design elements and automation features integrated into airport operations.</li>
+          <li>Gained insights into airside safety protocols, ground handling procedures, and multimodal connectivity at the airport.</li>
+          <li>Enhanced understanding of airport planning and operations as a transportation engineering student.</li>
+        </ul>
+        <div class="preview-buttons">
+          <a href="https://www.linkedin.com/posts/jeevithkumarjk_aviation-airportdesign-transportationengineering-activity-7319575584127295489-8vp1?utm_source=share&utm_medium=member_desktop&rcm=ACoAADaGixYB34p9SCjXS_guE568n0acXfhBhHg"
+             target="_blank" class="linkedin-icon">
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+        </div>
+      </div>
 
-            <div class="event-card">
-                <h3>Interstate Bridge (I-5) Site Visit – WSP Internship</h3>
-                <p><em>Portland, OR / Vancouver, WA</em></p>
-                <ul>
-                    <li>Visited the historic Interstate Bridge connecting Oregon and Washington, witnessing its vertical lift spans and critical infrastructure first-hand.</li>
-                    <li>Learned about the Interstate Bridge Replacement Program focusing on safety improvements, increased capacity, and multimodal access.</li>
-                    <li>Observed project planning and execution strategies for large-scale bridge projects, gaining insights into civil and transportation engineering applications.</li>
-                    <li>Enhanced understanding of collaborative efforts between state and federal transportation agencies and private engineering teams, as part of my internship experience at WSP.</li>
-                </ul>
-                <div class="preview-buttons">
-                    <a href="https://www.linkedin.com/posts/jeevithkumarjk_ibr-wsp-odot-activity-7355492165210296320-Xuey?utm_source=share&utm_medium=member_desktop&rcm=ACoAADaGixYB34p9SCjXS_guE568n0acXfhBhHg" target="_blank" class="linkedin-icon">
-                        <i class="fab fa-linkedin fa-lg"></i>
-                    </a>
-                </div>
-            </div>
+      <div class="event-card">
+        <h3>San Diego Industry Tours (Airport, Port, MTS)</h3>
+        <ul>
+          <li>Observed smart curbs, automation features, and sustainable design elements at San Diego International Airport.</li>
+          <li>Explored rapid transit expansion plans and climate resilience strategies for rail corridors at MTS.</li>
+          <li>Visited Port of San Diego to learn about multimodal corridors and sustainability initiatives.</li>
+        </ul>
+        <div class="preview-buttons">
+          <a href="https://www.linkedin.com/posts/jeevithkumarjk_transportationinnovation-sustainability-uscite-activity-7277498360092106752-xGzu?utm_source=share&utm_medium=member_desktop&rcm=ACoAADaGixYB34p9SCjXS_guE568n0acXfhBhHg"
+             target="_blank" class="linkedin-icon">
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+        </div>
+      </div>
 
-            <div class="event-card">
-                <h3>John Wayne Airport Technical Tour</h3>
-                <p><em>Orange County, California</em></p>
-                <ul>
-                    <li>Explored airside operations, runway systems, and airport infrastructure beyond the terminal.</li>
-                    <li>Observed sustainable design elements and automation features integrated into airport operations.</li>
-                    <li>Gained insights into airside safety protocols, ground handling procedures, and multimodal connectivity at the airport.</li>
-                    <li>Enhanced understanding of airport planning and operations as a transportation engineering student.</li>
-                </ul>
-                <div class="preview-buttons">
-                    <a href="https://www.linkedin.com/posts/jeevithkumarjk_aviation-airportdesign-transportationengineering-activity-7319575584127295489-8vp1?utm_source=share&utm_medium=member_desktop&rcm=ACoAADaGixYB34p9SCjXS_guE568n0acXfhBhHg" target="_blank" class="linkedin-icon">
-                        <i class="fab fa-linkedin fa-lg"></i>
-                    </a>
-                </div>
-            </div>
+      <div class="event-card">
+        <h3>Caltrans Transportation Management Center & SR 57/60 Confluence Tour</h3>
+        <ul>
+          <li>Witnessed real-time traffic monitoring and incident management at Caltrans District 12's Transportation Management Center.</li>
+          <li>Explored one of the nation's most critical transportation interchanges, facilitating 43% of Southern California's freight movement.</li>
+          <li>Gained insights into ITS, innovative traffic solutions, and infrastructure improvements driving regional growth.</li>
+        </ul>
+        <div class="preview-buttons">
+          <a href="https://www.linkedin.com/posts/jeevithkumarjk_transportationengineering-sr5760-infrastructure-activity-7248278056631459840-RKPV?utm_source=share&utm_medium=member_desktop&rcm=ACoAADaGixYB34p9SCjXS_guE568n0acXfhBhHg"
+             target="_blank" class="linkedin-icon">
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+        </div>
+      </div>
 
-            <div class="event-card">
-                <h3>San Diego Industry Tours (Airport, Port, MTS)</h3>
-                <ul>
-                    <li>Observed smart curbs, automation features, and sustainable design elements at San Diego International Airport.</li>
-                    <li>Explored rapid transit expansion plans and climate resilience strategies for rail corridors at MTS.</li>
-                    <li>Visited Port of San Diego to learn about multimodal corridors and sustainability initiatives.</li>
-                </ul>
-                <div class="preview-buttons">
-                    <a href="https://www.linkedin.com/posts/jeevithkumarjk_transportationinnovation-sustainability-uscite-activity-7277498360092106752-xGzu?utm_source=share&utm_medium=member_desktop&rcm=ACoAADaGixYB34p9SCjXS_guE568n0acXfhBhHg" target="_blank" class="linkedin-icon">
-                        <i class="fab fa-linkedin fa-lg"></i>
-                    </a>
-                </div>
-            </div>
+      <div class="event-card">
+        <h3>Foothill Transit Maintenance Facility Tour</h3>
+        <p><em>Arcadia, California</em></p>
+        <ul>
+          <li>Visited Foothill Transit’s state-of-the-art maintenance facility to understand bus operations and maintenance practices.</li>
+          <li>Observed innovative approaches to ensure efficient and reliable public transit services across the San Gabriel Valley.</li>
+          <li>Learned about sustainable practices and operational strategies that enhance public transportation performance.</li>
+          <li>Grateful for insights shared by Eric C. Shen, P.E., PTP, CPE, and USC ITE in organizing this valuable experience.</li>
+        </ul>
+        <div class="preview-buttons">
+          <a href="https://www.linkedin.com/posts/jeevithkumarjk_usc-activity-7243180326036905984-uF5h?utm_source=share&utm_medium=member_desktop&rcm=ACoAADaGixYB34p9SCjXS_guE568n0acXfhBhHg"
+             target="_blank" class="linkedin-icon">
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+        </div>
+      </div>
 
-            <div class="event-card">
-                <h3>Caltrans Transportation Management Center & SR 57/60 Confluence Tour</h3>
-                <ul>
-                    <li>Witnessed real-time traffic monitoring and incident management at Caltrans District 12's Transportation Management Center.</li>
-                    <li>Explored one of the nation's most critical transportation interchanges, facilitating 43% of Southern California's freight movement.</li>
-                    <li>Gained insights into ITS, innovative traffic solutions, and infrastructure improvements driving regional growth.</li>
-                </ul>
-                <div class="preview-buttons">
-                    <a href="https://www.linkedin.com/posts/jeevithkumarjk_transportationengineering-sr5760-infrastructure-activity-7248278056631459840-RKPV?utm_source=share&utm_medium=member_desktop&rcm=ACoAADaGixYB34p9SCjXS_guE568n0acXfhBhHg" target="_blank" class="linkedin-icon">
-                        <i class="fab fa-linkedin fa-lg"></i>
-                    </a>
-                </div>
-            </div>
+      <div class="gallery-button-container">
+        <button class="gallery-btn" onclick="previewAllTourPhotos()"> View All Industry Tour Photos </button>
+      </div>
+    </section>
 
-            <div class="event-card">
-                <h3>Foothill Transit Maintenance Facility Tour</h3>
-                <p><em>Arcadia, California</em></p>
-                <ul>
-                    <li>Visited Foothill Transit’s state-of-the-art maintenance facility to understand bus operations and maintenance practices.</li>
-                    <li>Observed innovative approaches to ensure efficient and reliable public transit services across the San Gabriel Valley.</li>
-                    <li>Learned about sustainable practices and operational strategies that enhance public transportation performance.</li>
-                    <li>Grateful for insights shared by Eric C. Shen, P.E., PTP, CPE, and USC ITE in organizing this valuable experience.</li>
-                </ul>
-                <div class="preview-buttons">
-                    <a href="https://www.linkedin.com/posts/jeevithkumarjk_usc-activity-7243180326036905984-uF5h?utm_source=share&utm_medium=member_desktop&rcm=ACoAADaGixYB34p9SCjXS_guE568n0acXfhBhHg" target="_blank" class="linkedin-icon">
-                        <i class="fab fa-linkedin fa-lg"></i> 
-                    </a>
-                </div>
-            </div>
-            <div class="gallery-button-container"> <button class="gallery-btn" onclick="previewAllTourPhotos()"> View All Industry Tour Photos </button> </div> </section> <section class="prof-dev-section"> <h2>Community Involvement</h2> <div class="event-card"> <h3>Cyclothan'23 Participation</h3> <p>Successfully completed a challenging 12-kilometer ride as part of Jayciana 2023, promoting fitness and community engagement.</p> </div> </section> </main> <footer> <p>&copy; 2025 Jeevith Kumar Jayakumar. All rights reserved.</p> </footer> <script> previewAllTourPhotos=()=>{ window.open("https://drive.google.com/drive/folders/13Ocb0fjNr7h27-SeYZ0VHVjcQm-1maHV", "_blank") } </script> </body> </html>
-        
+    <section class="prof-dev-section">
+      <h2>Community Involvement</h2>
+      <div class="event-card">
+        <h3>Cyclothan'23 Participation</h3>
+        <p>Successfully completed a challenging 12-kilometer ride as part of Jayciana 2023, promoting fitness and community engagement.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jeevith Kumar Jayakumar. All rights reserved.</p>
+  </footer>
+
+  <script>
+    previewAllTourPhotos = () => {
+      window.open("https://drive.google.com/drive/folders/13Ocb0fjNr7h27-SeYZ0VHVjcQm-1maHV", "_blank");
+    }
+  </script>
+
+</body>
+</html>
