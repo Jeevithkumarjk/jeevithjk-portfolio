@@ -1,21 +1,13 @@
 :root {
-    --primary-color: #C97706;    /* Amber - slightly less orange, strong contrast to blue */
-    --secondary-color: #E6A00B;  /* Golden yellow, softer than before */
-    --accent-color: #F0BF4F;     /* Softer amber highlight */
-    --text-primary: #2C1810;     /* Deep warm brown for readability */
-    --text-secondary: #4B2E20;   /* Softer brown for subtext */
-    --background-color: #FEF3E2; /* Soft peach, contrasts blue suit perfectly */
-    --card-background: #FFFFFF;  /* White cards - clean and professional */
-    --hover-color: #D97706;      /* Warm golden hover, less bright than original */
+    --primary-color: #C97706;
+    --secondary-color: #E6A00B;
+    --accent-color: #F0BF4F;
+    --text-primary: #2C1810;
+    --text-secondary: #4B2E20;
+    --background-color: #FEF3E2;
+    --card-background: #FFFFFF;
+    --hover-color: #D97706;
 }
-
-
-
-
-
-
-
-
 
 * {
     margin: 0;
@@ -29,6 +21,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-primary);
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 .container {
@@ -38,10 +31,12 @@ body {
     padding: 0 15px;
 }
 
+/* ✅ NAVBAR (same look) */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
+    height:9%;
     background: var(--primary-color);
     padding: 1rem;
     z-index: 1000;
@@ -49,6 +44,7 @@ body {
     border-bottom: 3px solid var(--accent-color);
 }
 
+/* ✅ Your original nav layout for desktop */
 .nav-links {
     display: flex;
     justify-content: center;
@@ -88,7 +84,14 @@ body {
     transform: translateY(-2px);
 }
 
+/* ✅ fixed header spacing */
+main {
+    padding-top: 75px;
+}
+
+/* ✅ HERO (video background only added) */
 .hero {
+    position: relative;
     min-height: 30vh;
     display: flex;
     align-items: center;
@@ -98,32 +101,51 @@ body {
     background: var(--primary-color);
     color: var(--card-background);
     border-bottom: 3px solid var(--accent-color);
-    padding-top: 5%;
+    overflow: hidden;
 }
 
-.hero-content h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 4rem;
-    font-weight: 800;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-    color: #ffffff;
+/* ✅ Video background */
+.hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* ✅ Overlay so text is readable */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 1;
+}
+
+.hero-content {
     position: relative;
-    animation: flyIn 1.5s ease-out;
+    z-index: 2;
 }
 
 .hero-content p {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.4rem;
     font-weight: 300;
     color: #ffffff;
     max-width: 800px;
     margin: 0 auto;
-    opacity: 0;
-    animation: fadeInUp 1s ease-out forwards 1s;
 }
 
+/* ✅ Title responsive so squeeze doesn't break */
+.nameJK {
+    font-size: clamp(1.8rem, 4.2vw, 4rem);
+    letter-spacing: clamp(1px, 0.6vw, 4px);
+    line-height: 1.15;
+    padding: 0 0.75rem;
+    word-break: break-word;
+}
+
+/* ✅ ABOUT (keeps your photo size stable) */
 .about-section {
     padding: 4rem 2rem;
     background-color: var(--card-background);
@@ -139,7 +161,7 @@ body {
 }
 
 .profile-image {
-    flex: 0 0 440px;
+    flex: 0 0 440px;  /* ✅ keeps it from growing huge */
     margin: 0;
     max-width: 100%;
 }
@@ -152,7 +174,7 @@ body {
 
 .about-text {
     flex: 1;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.8;
     font-size: 1.125rem;
     padding: 1.5rem;
@@ -162,6 +184,7 @@ body {
     min-width: 300px;
 }
 
+/* ✅ COLLAB */
 .collaboration-section {
     padding: 2rem;
     text-align: center;
@@ -178,9 +201,9 @@ body {
     font-weight: 500;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     border: 2px solid var(--primary-color);
-    margin-bottom: 0%;
 }
 
+/* ✅ QUOTE */
 .quote-section {
     padding: 4rem 2rem;
     text-align: center;
@@ -188,20 +211,17 @@ body {
     color: var(--text-primary);
     border-top: 2px solid var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
-    margin: 3rem 0;
-    margin-bottom: 0%;
-    margin-top: 0%;
 }
 
-blockquote {
+.quote-box p {
     font-style: italic;
     font-size: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0rem;
     line-height: 1.8;
 }
 
+/* ✅ RESUME (keeps resume from becoming too large) */
 .resume-section {
     padding: 2rem;
     background-color: var(--card-background);
@@ -209,7 +229,8 @@ blockquote {
 }
 
 .resume {
-    max-width: 100%;
+    width: 100%;
+    max-width: 900px; /* ✅ prevents huge scaling on wide screens */
     height: auto;
     margin: 2rem auto;
     display: block;
@@ -226,6 +247,7 @@ blockquote {
     transition: background-color 0.3s ease;
 }
 
+/* ✅ FOOTER (unchanged) */
 footer {
     text-align: center;
     padding: 2rem;
@@ -233,374 +255,104 @@ footer {
     color: var(--card-background);
 }
 
-@keyframes flyIn {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+/* =========================================================
+   ✅ MOBILE: 3-dot / hamburger menu (CSS ONLY)
+   ========================================================= */
+
+/* Hide toggle + icon on desktop */
+.nav-toggle,
+.nav-toggle-label {
+    display: none;
 }
 
-@keyframes roadMove {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 100px 0;
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes flightTakeoff {
-    0% { bottom: -20px; left: -50px; transform: rotate(0deg); }
-    25% { bottom: 10%; left: 25%; transform: rotate(10deg); }
-    50% { bottom: 20%; left: 50%; transform: rotate(20deg); }
-    75% { bottom: 30%; left: 75%; transform: rotate(35deg); }
-    100% { bottom: 40%; left: calc(100% + 50px); transform: rotate(45deg); }
-}
-
-.hero-content {
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-content h1::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: repeating-linear-gradient(
-        90deg,
-        #ffffff 0px,
-        #ffffff 50px,
-        transparent 50px,
-        transparent 100px
-    );
-    animation: roadMove 2s linear infinite;
-}
-
-.hero-content h1::before,
-.hero-content h1 span:first-child::before {
-    content: '🛫';
-    font-size: 24px;
-    position: absolute;
-    bottom: -20px;
-    left: -50px;
-    animation: flightTakeoff 5s linear infinite;
-}
-
-.hero-content h1 span:first-child::before {
-    animation-delay: 2.0s;
-}
-
-@media (max-width: 1200px) {
-    .container {
-        max-width: 960px;
-    }
-    .profile-image {
-        flex: 0 0 385px;
-    }
-    blockquote {
-        font-size: 1.6rem;
-        padding: 1.5rem;
-    }
-}
-
-@media (max-width: 992px) {
-    .container {
-        max-width: 720px;
-    }
-}
-
+/* Mobile rules */
 @media (max-width: 768px) {
-    .container {
-        max-width: 540px;
+
+    main { padding-top: 85px; }
+
+    /* show hamburger */
+    .nav-toggle-label {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        position: absolute;
+        right: 16px;
+        top: 18px;
+        cursor: pointer;
+        z-index: 1100;
     }
-    .hero-content h1 {
-        font-size: 2.5rem;
+
+    .nav-toggle-label span {
+        width: 26px;
+        height: 3px;
+        background: #fff;
+        border-radius: 3px;
+        display: block;
     }
-    .hero-content p {
-        font-size: 1.2rem;
+
+    /* hide links by default */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.25s ease;
+        padding-top: 0;
     }
-    .about-text {
+
+    .nav-link {
+        width: 100%;
+        text-align: center;
         padding: 1rem;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        transform: none; /* prevents jump on mobile */
     }
+
+    /* when checked, open menu */
+    .nav-toggle:checked ~ .nav-links {
+        max-height: 320px;
+        padding-top: 10px;
+        background-color: var(--primary-color);
+    }
+
+    /* hero text smaller on mobile */
+    .hero-content p {
+        font-size: 1rem;
+        padding: 0 1rem;
+        line-height: 1.4;
+    }
+
+    /* keep photo not too big on mobile */
     .profile-image {
         flex: 0 0 100%;
         max-width: 330px;
         margin: 0 auto;
     }
-    blockquote {
-        font-size: 1.4rem;
-        padding: 1rem;
-    }
+
     #jobsearchText {
         padding: 1.5rem;
         font-size: 1.1rem;
     }
-    .nav-links {
-        gap: 1rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .container {
-        max-width: 100%;
-    }
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    .profile-image {
-        max-width: 275px;
-    }
-    blockquote {
-        font-size: 1.2rem;
-    }
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-    }
 }
 
 @media (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
-    .hero-content h1 {
-        font-size: 1.75rem;
-    }
-    .hero-content p {
-        font-size: 1rem;
-    }
-    .profile-image {
-        max-width: 100%;
-    }
-    #jobsearchText {
-        font-size: 1rem;
-        padding: 1rem;
-    }
-}
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
-        letter-spacing: 2px;
-        padding: 0 1rem;
-        word-wrap: break-word;
-        hyphens: auto;
-    }
-}
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 2rem;
-        letter-spacing: 1px;
-        line-height: 1.2;
-        margin-top: 3rem;
-    }
-    
-    .hero {
-        padding-top: 4rem;
-        min-height: 40vh;
-    }
-}
-@media (max-width: 320px) {
-    .hero-content h1 {
-        font-size: 1.75rem;
-        letter-spacing: 0.5px;
-    }
-}
-/* Base styles */
-body {
-  font-size: 16px;
-  line-height: 1.5;
-  overflow-x: hidden;
+    body { font-size: 14px; }
+    .hero { min-height: 40vh; }
+    #jobsearchText { padding: 1rem; font-size: 1rem; }
 }
 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-  box-sizing: border-box;
-}
-
-/* Flexible images */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Fixed header for mobile */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
-
-/* Adjust content for fixed header */
-main {
-  padding-top: 60px; /* Adjust based on your header height */
-}
-
-/* Media queries for responsive design */
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-    letter-spacing: 2px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about-content {
-    flex-direction: column;
-  }
-
-  .profile-image {
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .hero-content h1 {
-    font-size: 1.75rem;
-    letter-spacing: 1px;
-  }
-
-  #jobsearchText {
-    font-size: 1rem;
-    padding: 1rem;
-  }
-}
-
-/* Ensure smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Optimize for touch devices */
-@media (hover: none) {
-  .nav-link:hover,
-  .nav-link.active,
-  .download-button:hover {
-    transform: none;
-  }
-}
-
-/* Reduce motion for accessibility */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-}
-/* Mobile Responsive Styles */
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 14px;
-        overflow-x: hidden;
-    }
-
-    .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        padding: 0.5rem;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        padding: 0.5rem;
-    }
-
-    .hero {
-        min-height: calc(100vh - 60px);
-        padding-top: 80px;
-    }
-
-    .hero-content {
-        padding: 0 15px;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-        letter-spacing: 2px;
-        padding: 0 10px;
-        word-wrap: break-word;
-        hyphens: auto;
-        margin-top: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-        padding: 0 10px;
-    }
-
-    .about-content {
-        flex-direction: column;
-    }
-
-    .profile-image {
-        max-width: 100%;
-        margin-bottom: 1rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    html, body {
-        -webkit-text-size-adjust: 100%;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .hero-content h1 {
-        font-size: 1.75rem;
-        letter-spacing: 1px;
-        line-height: 1.2;
-    }
-
-    .container {
-        padding: 0 10px;
-    }
-}
-
-/* Touch Device Optimizations */
+/* Touch devices: remove hover transforms */
 @media (hover: none) {
     .nav-link:hover,
-    .nav-link.active {
+    .nav-link.active,
+    .download-button:hover {
         transform: none;
     }
 }
 
-/* Accessibility */
+/* Reduce motion */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation: none !important;
