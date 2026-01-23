@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>JEEVITH KUMAR JK- PORTFOLIO </title>
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
 </head>
+
 <body>
     <nav class="navbar">
+        <!-- ✅ Mobile menu checkbox (CSS only) -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+        <!-- ✅ 3-line icon (hamburger / 3 dots style) -->
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- ✅ Your existing links (UNCHANGED) -->
         <div class="nav-links">
             <a href="#home" class="nav-link active">Home</a>
             <a href="about.html" class="nav-link">About</a>
@@ -22,6 +34,13 @@
 
     <main>
         <section id="home" class="hero">
+            <!-- ✅ Video background -->
+            <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+                <source src="video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+
+            <!-- ✅ Existing content untouched -->
             <div class="hero-content">
                 <br>
                 <h1 class="nameJK" style="text-shadow: 5px 5px black;">JEEVITH KUMAR JAYAKUMAR</h1><br>
@@ -41,15 +60,12 @@
                 </div>
             </div>
         </section>
-                
-            </div>
-        </section>
 
         <section id="collaboration" class="collaboration-section">
             <p style="font-size: 120%;">I'm excited to collaborate with forward-thinking professionals to bring transformative transportation projects to life. Together, let's create intelligent, connected, and resilient transportation systems that will redefine global mobility.</p>
             <div id="jobsearchText">
                 <p style="font-size: 150%;">I am currently seeking full-time opportunities as a Transportation and Traffic Engineer, where I can contribute to smarter traffic operations, innovative roadway designs, and seamless mobility solutions that advance connected communities.</p>
-
+            </div>
         </section>
 
         <section class="quote-section">
@@ -57,7 +73,6 @@
                 <p style="font-size: 120%;">"In every road, rail, and runway I design, I'm not just creating paths—I'm connecting the world to a better, more connected future, one journey at a time."</p>
             </div>
         </section>
-
 
         <section id="resume" class="resume-section">
             <h2>Resume</h2>
@@ -72,7 +87,4 @@
         <div class="social-links">
             <a href="https://linkedin.com/in/jeevithkumarjk" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
-        <p>&copy; 2025 Jeevith Kumar Jayakumar. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+        <p>&copy; 2025 Jeevith Kumar Jayakumar. All rights re
