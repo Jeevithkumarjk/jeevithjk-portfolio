@@ -5,14 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="About Jeevith Kumar Jayakumar - Educational and Professional Background">
     <title>About - Jeevith Kumar Jayakumar</title>
+
+    <!-- ✅ IMPORTANT: load global navbar/mobile styles first -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- ✅ your existing about page styles (kept) -->
     <link rel="stylesheet" href="about.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Raleway:wght@800&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+    <!-- ✅ UPDATED NAVBAR (hamburger works on mobile) -->
     <nav class="navbar">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
         <div class="nav-links">
             <a href="index.html" class="nav-link">Home</a>
-            <a href="#" class="nav-link active">About</a>
+            <a href="about.html" class="nav-link active">About</a>
             <a href="projects.html" class="nav-link">Projects</a>
             <a href="professional.html" class="nav-link">Professional Development</a>
             <a href="contact.html" class="nav-link">Contact</a>
@@ -22,15 +39,14 @@
     <main>
         <section id="education">
             <h2>Educational Background</h2>
+
             <div class="education-card">
                 <h3>University of Southern California, Los Angeles, California</h3>
                 <h4>Master of Science in Transportation and Highway Engineering</h4>
                 <p><em>August 2024 - Present</em></p>
                 <p>GPA: 3.92</p>
                 <p>Relevant Coursework: Data Analytics for Surface Transportation, Intelligent Transport Operations, Design of Transportation Infrastructure, Digital Tools for Transportation,Transportation System Analysis and Construction Planning and Preconstruction.</p>
-                <div class="btn-container">
-                    
-                </div>
+                <div class="btn-container"></div>
             </div>
 
             <div class="education-card">
@@ -39,9 +55,7 @@
                 <p><em>August 2019 - December 2023</em></p>
                 <p>CGPA: 7.37</p>
                 <p>Relevant Coursework: Highway Engineering, Railway and Airport Engineering, Road Safety Engineering, Concrete and Highway Material Testing Lab, Engineering Mechanics, Construction Materials and Technology, Fundamentals of Surveying, Concrete Technology, Design of RC Structures, Geotechnical Engineering, etc.</p>
-                <div class="btn-container">
-                    
-                </div>
+                <div class="btn-container"></div>
             </div>
         </section>
 
@@ -61,6 +75,7 @@
                     <li><strong>Technical Skills:</strong> AutoCAD, Synchro, PTV Vissim, Bluebeam Revu, Power Inroads, OpenRoads, HCS</li>
                 </ul>
             </div>
+
             <div class="experience-card">
                 <h3>M.J Associates</h3>
                 <h4>Junior Engineer</h4>
@@ -90,8 +105,9 @@
                     <button class="preview-btn photos-btn" onclick="previewPhotos()">Preview Photos</button>
                 </div>
             </div>
+
             <div class="experience-card">
-                <h3>Illy's / Starbucks - Trojan Grounds </h3>
+                <h3>Illy's / Starbucks - Trojan Grounds</h3>
                 <h4>Part-Time Student Worker</h4>
                 <p><em>September 2024 – Present | Los Angeles, California</em></p>
                 <p>As a part-time Barista at Illy's / Trojan Grounds Starbucks, I have gained hands-on experience in customer service, café operations, and teamwork. Key responsibilities and impacts include:</p>
@@ -108,48 +124,40 @@
                     <button class="preview-btn photos-btn" onclick="previewPhotos()">Preview Photos</button>
                 </div>
             </div>
-            
-            <section id="skills">
-                <h2>Skills</h2>
-                <div class="skills-card">
-                    <ul>
-                        <!-- Civil Engineering Design -->
-                        <li><strong>AutoCAD</strong>: 2D and 3D design for civil engineering projects</li>
-                        <li><strong>OpenRoads</strong>: Roadway and highway design</li>
-                        <li><strong>OpenRails</strong>: Railway and rail infrastructure design</li>
-                        <li><strong>MicroStation</strong>: Civil and transportation modeling</li>
-                        
-                        <!-- Traffic & Transportation Engineering -->
-                        <li><strong>PTV Vissim</strong>: Traffic simulation and microsimulation modeling</li>
-                        <li><strong>Synchro</strong>: Intersection and corridor traffic analysis</li>
-                        <li><strong>HCS</strong>: Highway capacity analysis and modeling</li>
-                        <li><strong>Bluebeam Revu</strong>: Plan review and redline corrections</li>
-                        <li><strong>Power InRoads</strong>: Civil and transportation drafting/design</li>
-                        
-                        <!-- Structural & Project Management -->
-                        <li><strong>STAAD Pro & ETABS</strong>: Structural analysis and design</li>
-                        <li><strong>Primavera P6</strong>: Project scheduling and management</li>
-                        
-                        <!-- Data & Productivity -->
-                        <li><strong>R Programming</strong>: Data analysis and visualization</li>
-                        <li><strong>Microsoft Office Suite</strong>: Proficiency in Excel, Word, and PowerPoint</li>
+        </section>
 
-                </div>
-            </section>
-            
-                        
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-card">
+                <ul>
+                    <li><strong>AutoCAD</strong>: 2D and 3D design for civil engineering projects</li>
+                    <li><strong>OpenRoads</strong>: Roadway and highway design</li>
+                    <li><strong>OpenRails</strong>: Railway and rail infrastructure design</li>
+                    <li><strong>MicroStation</strong>: Civil and transportation modeling</li>
+                    <li><strong>PTV Vissim</strong>: Traffic simulation and microsimulation modeling</li>
+                    <li><strong>Synchro</strong>: Intersection and corridor traffic analysis</li>
+                    <li><strong>HCS</strong>: Highway capacity analysis and modeling</li>
+                    <li><strong>Bluebeam Revu</strong>: Plan review and redline corrections</li>
+                    <li><strong>Power InRoads</strong>: Civil and transportation drafting/design</li>
+                    <li><strong>STAAD Pro & ETABS</strong>: Structural analysis and design</li>
+                    <li><strong>Primavera P6</strong>: Project scheduling and management</li>
+                    <li><strong>R Programming</strong>: Data analysis and visualization</li>
+                    <li><strong>Microsoft Office Suite</strong>: Proficiency in Excel, Word, and PowerPoint</li>
+                </ul>
+            </div>
+        </section>
 
-            <section id="awards">
-                <h2>Awards and Honors</h2>
-                <div class="awards-card">
-                    <ul>
-                        <li>Recognized among the <strong>Top 100 Summer Interns in the USA (2025)</strong> by National Intern Day, presented by WayUp x Yello. View the official list here: <a href="https://www.nationalinternday.com/2025-top-100-interns" target="_blank">Top 100 Interns 2025</a></li>
-                        <li>Awarded "Best Project of Year 2023" for final year project from Karnataka State Council for Science and Technology</li>
-
-                    </ul>
-                </div>
-            </section>
-            
+        <section id="awards">
+            <h2>Awards and Honors</h2>
+            <div class="awards-card">
+                <ul>
+                    <li>Recognized among the <strong>Top 100 Summer Interns in the USA (2025)</strong> by National Intern Day, presented by WayUp x Yello. View the official list here:
+                        <a href="https://www.nationalinternday.com/2025-top-100-interns" target="_blank">Top 100 Interns 2025</a>
+                    </li>
+                    <li>Awarded "Best Project of Year 2023" for final year project from Karnataka State Council for Science and Technology</li>
+                </ul>
+            </div>
+        </section>
 
         <section id="certifications">
             <h2>Certifications</h2>
@@ -182,6 +190,7 @@
                 <p>Public Representative Head of Nirman Club (Technical Club of Civil, Construction Management, and Environmental Engineering) 2022-2024</p>
             </div>
         </section>
+
     </main>
 
     <footer>
